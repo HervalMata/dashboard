@@ -23,7 +23,7 @@ const Register = () => {
 
     return (
         <div className="min-w-screen min-h-screen bg-[#CDCAE9] flex justify-center items-center">
-            <div className="w-[350px] text-[#FFFFFFF] p-2">
+            <div className="w-[350px] text-[#FFFFFF] p-2">
                 <div className="bg-[#6F68D1] p-4 rounded-md">
                     <h2 className="text-xl mb-3 font-bold">
                         Bemvindo a Loja
@@ -90,7 +90,7 @@ const Register = () => {
                                 Entrar</Link>
                             </p>
                         </div>
-                        <div className="w-full justify-center items-center mb-3">
+                        <div className="w-full flex justify-center items-center mb-3">
                             <div className="w-[45%] bg-slate-700 h-[1px]"></div>
                             <div className="w-[10%] flex justify-center items-center">
                                 <span className="pb-1">Ou</span>
