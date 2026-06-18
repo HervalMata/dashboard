@@ -21,9 +21,11 @@ const AdminDashboard = () => {
             },
         ],
         options: {
-            color: ['#181EE8', '#181EE8'],
+            colors: ['#181EE8', '#181EE8'],
             plotOptions: {
-                radius: 30
+                bar: {
+                    borderRadius: 30
+                }
             },
             chart: {
                 background: 'transparent',
@@ -32,7 +34,7 @@ const AdminDashboard = () => {
             dataLabels: {
                 enabled: false
             },
-            strock: {
+            stroke: {
                 show: true,
                 curve: ['smooth', 'straight', 'stepline'],
                 lineCap: 'butt',
@@ -182,26 +184,21 @@ const AdminDashboard = () => {
                     <table className="w-full text-sm text-left text-[#D0D2D6]">
                         <thead className="text-sm text-[#D0D2D6] uppercase border-b border-slate-700">
                         <tr>
-                            <th scope='col' className="py-3 px-4">Ordem ID</th>
-                            <th scope='col' className="py-3 px-4">Preço</th>
-                            <th scope='col' className="py-3 px-4">Status do Pagamento</th>
-                            <th scope='col' className="py-3 px-4">Status da Ordem</th>
-                            <th scope='col' className="py-3 px-4">Ativo</th>
+                            <th scope='row' className="py-3 px-4">Ordem ID</th>
+                            <th scope='row' className="py-3 px-4">Preço</th>
+                            <th scope='row' className="py-3 px-4">Status do Pagamento</th>
+                            <th scope='row' className="py-3 px-4">Status da Ordem</th>
+                            <th scope='row' className="py-3 px-4">Ativo</th>
                         </tr>
                         </thead>
                         <tbody>
                             {
                                 [1, 2, 3, 4, 5].map((d, i) => <tr key={i}>
-                                    {/* eslint-disable-next-line jsx-a11y/scope */}
-                                    <td scope='row' className="py-3 px-4 font-medium whitespace-nowrap">#34344</td>
-                                    {/* eslint-disable-next-line jsx-a11y/scope */}
-                                    <td scope='row' className="py-3 px-4 font-medium whitespace-nowrap">R$ 454,00</td>
-                                    {/* eslint-disable-next-line jsx-a11y/scope */}
-                                    <td scope='row' className="py-3 px-4 font-medium whitespace-nowrap">Pendente</td>
-                                    {/* eslint-disable-next-line jsx-a11y/scope */}
-                                    <td scope='row' className="py-3 px-4 font-medium whitespace-nowrap">Pendente</td>
-                                    {/* eslint-disable-next-line jsx-a11y/scope */}
-                                    <td scope='row' className="py-3 px-4 font-medium whitespace-nowrap"><Link>Veja</Link></td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap">#34344</td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap">R$ 454,00</td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap">Pendente</td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap">Pendente</td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap"><Link>Veja</Link></td>
                                 </tr>)
                             }
                         </tbody>
